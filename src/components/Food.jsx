@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { data } from '../data/data'
 
 function Food() {
-  console.log(data)
+  const [foods, setFoods] = useState(data)
+
   return (
     <section id='filter-foods' className='max-width-[1640px] m-auto px-4 py-12'>
       <h1 className='text-orange-600 font-bold text-4xl text-center'>
@@ -51,6 +53,19 @@ function Food() {
           </div>
         </div>
       </div>
+
+      {/* Display Foods */}
+      <section id='food-items' className=''>
+        {foods.map((item) => (
+          <div>
+            <img src={item.image} alt={item.name} />
+            <div>
+              <p>{item.name}</p>
+              <p>{item.price}</p>
+            </div>
+          </div>
+        ))}
+      </section>
     </section>
   )
 }
