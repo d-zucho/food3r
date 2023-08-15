@@ -116,7 +116,7 @@ function Food() {
             />
             <div className='px-2 flex justify-between py-2'>
               <p className='font-bold'>{item.name}</p>
-              <span className='bg-orange-600 text-white p-1 rounded-full'>
+              <span className='bg-orange-600 text-white p-1 rounded-full flex items-center'>
                 {item.price}
               </span>
             </div>
